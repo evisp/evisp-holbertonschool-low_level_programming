@@ -5,7 +5,7 @@ int main(void)
 {
 	long int factor, number = 612852475143;
 
-	for (factor = 2; factor < (number / 2); factor++)
+	for (factor = 2; factor <= (number / 2); factor++)
 		if (number % factor == 0)
 			number = number / factor;
 
