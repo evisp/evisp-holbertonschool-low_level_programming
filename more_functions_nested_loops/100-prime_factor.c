@@ -3,13 +3,13 @@
 
 int main(void)
 {
-	long int factor, number = 612852475143;
+	long int a, n = 612852475143;
 
-	for (factor = 2; factor <= (number / 2); factor++)
-		if (number % factor == 0)
-			number = number / factor;
-
-        printf("%ld\n", factor);
-
-        return (0);
+	for (a = 2; a < n; a++)
+		if (n % a == 0)
+		{
+			n = n / a;
+		}
+	printf("%ld\n", a);
+	return (0);
 }
