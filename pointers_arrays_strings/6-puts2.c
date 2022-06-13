@@ -1,6 +1,6 @@
 #include "main.h"
 
-void _puts2(char *str)
+void puts2(char *str)
 {
   int i = 0;
 
