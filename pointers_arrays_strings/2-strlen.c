@@ -1,14 +1,11 @@
 #include "main.h"
 
-int _strlen(const char *str)
+int _strlen(const char *s)
 {
 	int length = 0;
 
-	while (*str)
-	  {
-		length++;
-		*str++;
-	  }
-
+	while (s[length] != '\0')
+	 	length++;
+	
 	return (length);
 }
