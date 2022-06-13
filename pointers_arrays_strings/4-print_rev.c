@@ -2,8 +2,10 @@
 
 void print_rev(char *s)
 {
-  int len;
-  len = _strlen(s);
+  int len, i = 0;
+  while (s[i] != '\0')
+    i++;
+  len = i - 1;
   
   while (len >= 0)
     {
