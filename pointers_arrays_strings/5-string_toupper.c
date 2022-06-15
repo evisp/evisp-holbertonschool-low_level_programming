@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *string_toupper(char *)
+char *string_toupper(char * str)
 {
         int i;
 
