@@ -1,21 +1,22 @@
 #include "main.h"
 
-int _find_sqrt(int number, int root)
+int _find_sqrt(int n, int root)
 {
-  if (number < 0)
-    return (-1);
-  if (number == 1)
-    return (1);
-  if (root > number / 2)
-    return (-1);
-  if (number != root * root)
-    return (_find_sqrt(number, root + 1));
-  if (number == root * root)
-    return (root);
-  return (-1);
+	if (root * root == n)
+		return (root);
+	if (root == n / 2)
+		return (-1);
+	else
+		return (_find_sqrt(n, root + 1));
 }
 
-int _sqrt_recursion(n)
+int _sqrt_recursion(int n)
 {
-  return (_find_sqrt(n, 0));
+	if (n < 0)
+		return (-1);
+	if (n == 1)
+		return (1);
+	else
+		return (_find_sqrt(n, 0));
+
 }
