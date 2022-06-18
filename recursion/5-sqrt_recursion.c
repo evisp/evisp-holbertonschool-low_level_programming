@@ -10,7 +10,7 @@ int _find_sqrt(int number, int root)
     return (-1);
   if (number != root * root)
     return (_find_sqrt(number, root + 1));
-  if (number = root * root)
+  if (number == root * root)
     return (root);
   return (-1);
 }
