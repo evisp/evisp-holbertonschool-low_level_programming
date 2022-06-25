@@ -4,14 +4,14 @@
 #include <stdarg.h>
 /**
  * struct p_d - structure for printing data
- * @f_type: format type
+ * @type: format type
  * @print: the function for printing
  */
-typedef struct p_d
+typedef struct printer
 {
-	char *f_type;
+	char *type;
 	void (*print)(va_list ag_list);
-} p_d;
+} printer_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
