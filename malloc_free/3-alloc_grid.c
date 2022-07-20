@@ -31,7 +31,9 @@ int **alloc_grid(int width, int height)
 	{
 		for (k = 0; k < width; k++)
 		{
-			my_array[j][k] = 0;
+
+
+		  my_array[j][k] = 0;
 		}
 	}
 	return (my_array);

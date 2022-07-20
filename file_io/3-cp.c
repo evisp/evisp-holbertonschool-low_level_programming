@@ -16,11 +16,7 @@ int main(int argc, char **argv)
 
 	return (0);
 }
-/**
- * cp - copy from a file to another file
- * @file_from: the file destination
- * @file_to: the source file
- */
+
 void cp(char *file_from, char *file_to)
 {
 	int file_src, file_dest, read_src, write_dest;
@@ -32,18 +28,21 @@ void cp(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
+
 	file_dest = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_dest == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
+
 	read_src = read(file_src, content, 1024);
 	if (read_src == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
+
 	while (read_src != 0)
 	{
 		write_dest = write(file_dest, content, read_src);
@@ -52,6 +51,7 @@ void cp(char *file_from, char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
+
 		read_src = read(file_src, content, 1024);
 		if (read_src == -1)
 		{
@@ -62,10 +62,7 @@ void cp(char *file_from, char *file_to)
 	cls(file_dest);
 	cls(file_src);
 }
-/**
- * cls - function that closes the files
- * @file: the file to be closed
- */
+
 void cls(int file)
 {
 	int cls_f;
